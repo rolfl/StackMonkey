@@ -32,7 +32,7 @@ var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 // TODO: Get service credentials and communicate with bluemix services.
 
 // The IP address of the Cloud Foundry DEA (Droplet Execution Agent) that hosts this application:
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var host = (process.env.VCAP_APP_HOST || '0.0.0.0');
 // The port on the DEA for communication with the application:
 var port = (process.env.VCAP_APP_PORT || 3000);
 // Start server
