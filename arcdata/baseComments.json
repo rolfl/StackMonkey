@@ -1,0 +1,19 @@
+[
+    { "name": "Broken Code", "description": "I'm afraid this question does not match what this site is about. $SITENAME$ is about improving existing, working code. $SITENAME$ is not the site to ask for help in fixing or changing <em>what</em> your code does. Once the code does what you want, we would love to help you do the same thing in a cleaner way! Please see our <a href=\"http://$SITEURL$/help/on-topic\">help center</a> for more information."},
+
+    { "name": "Answers Invalidated", "description": "I have rolled back the last edit. Please see <em><a href=\"http://meta.codereview.stackexchange.com/a/1765\">what you may and may not do after receiving answers</a></em>."},
+
+    { "name": "Description is behind a link", "description": "Links can rot. <a href=\"http://meta.codereview.stackexchange.com/q/1993/41243\">Please include a description of the challenge here in your question.</a>"},
+
+    { "name": "Non-Review Answer", "description": "You have presented an alternative solution, but haven't reviewed the code. Please explain your reasoning (how your solution works and how it improves upon the original) so that the author can learn from your thought process."},
+
+    { "name": "Example Code", "description": "The example code that you have posted is not reviewable in this form because it leaves us guessing at your intentions. Unlike Stack Overflow, $SITENAME$ needs to look at concrete code in a real context. Please see <a href=\"http://meta.codereview.stackexchange.com/q/1709/41243\"><em>Why is hypothetical example code off-topic for CR?</em></a>"},
+
+    { "name": "Bad Title", "description": "As we all want to make our code more efficient or improve it in one way or another, try to write a title that summarizes what your code does, not what you want to get out of a review. For examples of good titles, check out <a href=\"http://meta.codereview.stackexchange.com/q/3883/23788\">Best of $SITENAME$ 2014 - Best Question Title Category</a> You may also want to read <a href=\"http://meta.codereview.stackexchange.com/a/2438/41243\">How to get the best value out of $SITENAME$ - Asking Questions</a>."},
+
+    { "name": "Question lacks description", "description": "To make life easier for reviewers, please add sufficient context to your question. The more you tell us about what your code does and what the purpose of doing that is, the easier it will be for reviewers to help you. See also <a href=\"http://meta.codereview.stackexchange.com/questions/1226/code-should-include-a-description-of-what-the-code-does\">this meta question</a>"},
+
+    { "name": "Answer which is a question", "description": "This isn't an answer to the question. If you have another question, please ask it by clicking the <a href=\"http://$SITEURL$/questions/ask\">Ask Question</a> button. If you are uncertain, take a look at [ask]."} 
+
+]
+

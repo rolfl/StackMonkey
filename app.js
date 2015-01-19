@@ -5,20 +5,52 @@
 // This sample application uses express as web application framework (http://expressjs.com/),
 // and jade as template engine (http://jade-lang.com/).
 
+// Infrastructure modules
 var express = require('express');
+//var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+
+// Site-specific modules
+var arc = require('./arc');
 
 // setup middleware
 var app = express();
+
 app.use(app.router);
 app.use(express.errorHandler());
 app.use(express.static(__dirname + '/public')); //setup static public directory
+
+app.use(methodOverride('_method'));
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views'); //optional since express defaults to CWD/views
+
+// Error handling
+app.use(function(err, req, res, next) {
+    console.log("Error encountered, Logging");
+    console.error(err.stack);
+    next(err);
+});
+
+app.use(function(err, req, res, next) {
+    console.log("Error encountered, Return to sender");
+    res.status(500);
+    res.render('error', { error: err });
+});
+
+
 
 // render index page
 app.get('/', function(req, res){
 	res.render('index');
 });
+
+app.get('/arc', arc.base);
+app.get('/arc/', arc.base);
 
 // There are many useful environment variables available in process.env.
 // VCAP_APPLICATION contains useful information about a deployed application.
