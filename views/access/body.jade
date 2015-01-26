@@ -1,0 +1,26 @@
+//- body.jade
+//- This file provides the HTML body part.
+
+body
+  table
+    tr
+      td(style= "width:30%;" )
+        img(src="/images/VervetMonkey.small.jpg")
+      td
+        if user
+            h1 Currently logged in already
+            p
+                | User:
+                = user.name
+            P <a href="/logout">Logout</a>
+        else
+            h1 Login to StackMonkey
+            p Welcome to StackMonkey. Some functionality will require you to log in.
+            form(name="login", ation="/login", method="/post")
+                p
+                    input(type="text", name="user")
+                p
+                    input(type="password", name="pass")
+                p
+                    input(type="submit", value="login")
+

@@ -1,10 +1,24 @@
 /* AutoReviewComments: http://stackapps.com/questions/2116/autoreviewcomments-pro-forma-comments-for-se */
 
+var express = require('express');
+var app = express();
 var fs = require('fs');
 var dataDir = './arcdata/';
-var baseComments = dataDir + 'baseComments.json'
+var baseComments = dataDir + 'baseComments.json';
 
-exports.base = function(req, res, next) {
+var arcRouter = express.Router();
+
+console.log("Got " + arcRouter + " from " + express);
+
+//arcRouter.use(function timeLog(req, res, next) {
+
+//    console.log("Time: " + Date.now() + " Request for " + req.originalUrl + " From " + req.ip);
+//    next();
+
+//});
+
+arcRouter.get('/', function(req, res, next) {
+
     // asynchronous read the base comments.
     fs.readFile(baseComments, 'utf8', function (err, data) {
         if (err) {
@@ -19,5 +33,8 @@ exports.base = function(req, res, next) {
 
         res.jsonp(json);
     });
-}
+
+});
+
+module.exports = arcRouter;
 
