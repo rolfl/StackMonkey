@@ -14,6 +14,7 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 
+
 // ///////////////////////////////
 // Application configuration
 // ///////////////////////////////
